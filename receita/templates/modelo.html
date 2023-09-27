@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'  %}">
+    <link rel="stylesheet" href="{% static 'css/default.css'  %}">
+
+    {% block title%}
+    <title>Modelo</title>
+    {% endblock %}
+
+</head>
+<body>
+<section class="site-page container-fluid">
+    <section id='header'>
+        <header>
+            <h4>HEADER</h4>
+        </header>
+    </section>
+
+
+    <section class="content-site h-100">
+    {% block content%}
+        <div>
+            <h1>Content Here ...</h1>
+        </div>
+    {% endblock %}
+    </section>
+
+
+
+    <section id='footer'>
+        <footer>
+            <h5>FOOTER</h5>
+        </footer>
+    </section>
+
+</section>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://kit.fontawesome.com/b3cdcff831.js" crossorigin="anonymous"></script>
+</body>
+</html>

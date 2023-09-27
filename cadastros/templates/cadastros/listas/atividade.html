@@ -1,0 +1,47 @@
+{% extends 'modelo.html'%}
+
+{%block title%}
+    <title>Formulario - Lista de Atividades</title>
+{% endblock %}
+
+{% block content %}
+    <div class='container bg- mt-5'>
+        <h5 class='text-center'>Lista de Atividades</h5>
+
+        <p class='text-center'>As Atividades registradas estão listadas a seguir</p>
+
+        <hr>
+        <div class="table-responsive">
+        <table class="table table-striped table-dark">
+            <tr>
+                <th>N°</th>
+                <th>Descrição</th>
+                <th>Campo</th>
+                <th>Opções</th>
+            </tr>
+
+            {% for atividade in object_list %}
+            <tr>
+                <td >{{ atividade.pk }}</td>
+                <td >{{ atividade.description }}</td>
+                <td >{{ atividade.campo }}</td>
+                <td >
+                    <a href="{% url 'editar-atividade' atividade.pk %}" class="btn btn-warning btn-sm fa fa-edit" title='Editar'></a>
+                    <a href="{% url 'deletar-atividade' atividade.pk %}" class="btn btn-danger btn-sm fa fa-trash" title='Excluir'></a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">Nenhuma Atividade registrada.</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a href="{% url 'home' %}" class="btn btn-primary mb-5" title='Voltar Inicio'>Voltar
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
+        </div>
+        
+        
+    </div>
+{% endblock %}

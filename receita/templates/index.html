@@ -1,0 +1,29 @@
+{% extends 'modelo.html'%}
+{% load static %}
+
+
+{%block title%}
+    <title>Home</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="container-fluid">
+            <a class='btn btn-success bg-success mt-5' href=" {% url 'sobre' %} ">
+                Ir para pagina Sobre
+            </a>
+    </div>
+
+    <div class="container-fluid">
+            <a class='btn btn-primary mt-5' href=" {% url 'listar-campo' %} ">
+                Ver Lista de Campos
+            </a>
+
+    </div>
+
+    <div class="container-fluid">
+            <a class='btn btn-primary mt-5 mb-5' href=" {% url 'listar-atividade' %} ">
+                Ver Lista de Atividades
+            </a>
+    </div>
+{% endblock %}
