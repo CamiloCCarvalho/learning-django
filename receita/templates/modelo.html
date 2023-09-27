@@ -17,9 +17,28 @@
 <body>
 <section class="site-page container-fluid">
     <section id='header'>
-        <header>
-            <h4>HEADER</h4>
-        </header>
+        <nav class="navheader navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="text-info navbar-brand" href="#">X</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="text-info nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="text-info nav-link" href="#">Campos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="text-info nav-link" href="#">Atividades</a>
+                  </li>
+                </ul>
+                <button class="btn btn-info text-white" type="submit">log-in</button>
+              </div>
+            </div>
+          </nav>
     </section>
 
 
@@ -34,15 +53,19 @@
 
 
     <section id='footer'>
-        <footer>
-            <h5>FOOTER</h5>
-        </footer>
+        <footer class="footercard card">
+            <h5 class="card-header text-center">Developed</h5>
+            <div class="card-body m-0 pb-5">
+              <h5 class="card-title">Special footer</h5>
+              <p class="card-text">A little content here.</p>
+            </div>
+          </footer>
     </section>
 
 </section>
 
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="https://kit.fontawesome.com/b3cdcff831.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b3cdcff831.js" crossorigin="anonymous" defer ></script>
 </body>
 </html>

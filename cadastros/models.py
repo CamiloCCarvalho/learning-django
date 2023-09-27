@@ -6,7 +6,7 @@ class Campo(models.Model):
     description = models.CharField(max_length=150, verbose_name='Descrição')
     
     def __str__(self):
-        return "{} ({})".format(self.name, self.description)
+        return "{}".format(self.name, self.description)
     
 class Atividade(models.Model):
     number = models.IntegerField(verbose_name='Número', unique=True)

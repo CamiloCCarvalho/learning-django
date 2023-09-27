@@ -1,8 +1,8 @@
-{% extends 'modelo.html'%}
+{% extends 'modelo.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
-{%block title%}
+{% block title %}
     <title>Formulario - Cadastrar</title>
 {% endblock %}
 
@@ -17,7 +17,7 @@
         <form class='text-center' action='' method='POST'>
             {% csrf_token %}
 
-            {{ form|crispy }}
+            {{ form.as_p }}
 
             <div>
             <button type='submit' class='btn btn-primary mt-2 mb-5'>

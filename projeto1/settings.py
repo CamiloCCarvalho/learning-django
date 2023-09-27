@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 ]
 
 ######## CRISPY_FORMS
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'Bootstrap5'
 # https://django-crispy-forms.readthedocs.io/en/latest/
 
